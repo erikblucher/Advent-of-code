@@ -7,21 +7,20 @@ internal class Program
         var sr = new StreamReader("../../../input.txt");
         var line = sr.ReadLine();
 
-        // Part 1
         List<string> textToNumbersAndNumbers = new();
         List<string> onlyNumbers = new();
         Regex filterNumbers = new Regex("[a-zA-Z]");
         while (line != null)
         {
             onlyNumbers.Add(filterNumbers.Replace(line, ""));
-
             var convertedToNumbers = ConvertTextToOnlyNumbers(line);
             textToNumbersAndNumbers.Add(filterNumbers.Replace(convertedToNumbers, ""));
             line = sr.ReadLine();
         }
 
-        var sumOnlyNumbers = SumNumbers(onlyNumbers);
-        Console.WriteLine($"Part 1 --> Sum is: {sumOnlyNumbers}");
+        // Part 1
+        var sumOnlyDigits = SumNumbers(onlyNumbers);
+        Console.WriteLine($"Part 1 --> Sum for first and last digits is: {sumOnlyDigits}");
 
         // Part 2
         var sumTextToNumbers = SumNumbers(textToNumbersAndNumbers);
@@ -36,7 +35,7 @@ internal class Program
     private static string ConvertTextToOnlyNumbers(string text)
     {
         // Find indexes for numbers, both in text as "one" and "1"
-        // Use tuples to keep track of where which number goes
+        // Use tuples to keep track of index where which number goes
         (int, string) indexOneFirst = (text.IndexOf("one"), "1");
         (int, string) indexOneLast = (text.LastIndexOf("one"), "1");
         (int, string) indexTwoFirst = (text.IndexOf("two"), "2");

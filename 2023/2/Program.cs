@@ -41,7 +41,6 @@ internal class Program
         }
 
         // Part 1
-
         int sumOfIds = 0;
         foreach (var game in games)
         {
@@ -54,7 +53,6 @@ internal class Program
         Console.WriteLine($"Part 1 --> Sum of id:s for possible games is: {sumOfIds}");
 
         // Part 2
-
         int sumOfPowers = 0;
         foreach (var game in games.Select(g => g.Item2))
         {
@@ -131,4 +129,4 @@ internal class Program
 }
 
 // Part 1 --> 2879
-// Part 2 --> 2879
+// Part 2 --> 65122
