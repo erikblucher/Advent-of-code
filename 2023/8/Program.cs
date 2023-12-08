@@ -86,7 +86,7 @@
     /// </summary>
     /// <param name="numbers"></param>
     /// <returns></returns>
-    public static long FindLcm(List<int> numbers)
+    private static long FindLcm(List<int> numbers)
     {
         long lcm = 1;
         int divisor = 2;
