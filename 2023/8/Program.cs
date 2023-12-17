@@ -62,7 +62,7 @@
         }
         // The solution where all ends with 'Z' at the same time is the least common multiple
         var lcm = FindLcm(allStepsToFindEndZ);
-        Console.Write($"Part 2 --> Steps to find Z at the end simultaneously: {lcm}");
+        Console.Write($"Part 2 --> Steps to find Z at the end simultaneously: {lcm}.");
     }
 
     /// <summary>

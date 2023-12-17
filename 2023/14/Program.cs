@@ -192,8 +192,7 @@
         {
             if (item.Value == 'O')
             {
-                var loadTest = rows - item.Key.Item2;
-                load += loadTest;
+                load += rows - item.Key.Item2; 
             }
         }
 
