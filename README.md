@@ -1,7 +1,7 @@
 # Advent of code
 
-Starting with Advent of Code 2023.
-Now also 2024 started!
+Starting with Advent of Code 2023.<br />
+Now also 2024 started!<br />
 Let´s see how far I'll go and if I will finish 2023 one day.
 
 ### Technology
